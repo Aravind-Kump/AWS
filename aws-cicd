@@ -39,6 +39,10 @@ Changes can be monitored from the CodePipeline.
 CI  Codepipeline  Staging and deployment (Beanstalk)
 
 
+If we want to roleback to previous version.
+Go to application in beanstalk and click on application version and select the version to which we want to role back and click on the deploy.
+
+
 
 
 
