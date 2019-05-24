@@ -1,0 +1,44 @@
+AWS CICD (node.js)
+CI (Codepipeline)  CD (Beanstalk)
+
+Elastic Beanstalk 
+
+Click on create
+Provide the details as per the requirement
+Click on configure more options and select High availability  Gives load-balancer with CROSS LOAD BALANCING over multiple availability zones.
+And finally click on create app.
+
+GIT HUB:
+
+Navigate to the repository.
+In beanstalk, Go to application and click on application versions  Under Source  sample applications  get the node.js zip
+
+Unzip the file and do the below changes.
+Line 38 (change the color for now)
+Now, push this change to GIT repository.
+
+In AWS, open CODEPIPELINE.
+Click on get started and give a name to pipeline.
+Source Provider  GIT HUB
+Provide the creds for GIT HUB  repo and branch details.
+ADVANCEDopt for “Run pipeline when changes in source content are detected.”
+Next Step
+Build  Ignore for now (mention as NO Build)
+Next Step
+
+Deploy  Opt for Elastic Beanstalk
+Also provide Application name and Env name.
+Next step
+AWS Service Role
+Role name   Create in IAM Role. Role name “AWS-CodePipeline-Service”
+Next step
+Review and create.
+
+Changes can be monitored from the CodePipeline.
+
+CI  Codepipeline  Staging and deployment (Beanstalk)
+
+
+
+
+
